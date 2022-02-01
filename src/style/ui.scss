@@ -1,0 +1,19 @@
+@import "./constants.scss";
+
+// ......................TECHNICAL CLASSES..........................
+._container {
+  max-width: $maxWidthContainer;
+  width: 100%;
+  padding: 0px 1rem;
+  margin: 0 auto;
+}
+._flex {
+  display: flex;
+}
+._hover {
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    }
+  }
+}

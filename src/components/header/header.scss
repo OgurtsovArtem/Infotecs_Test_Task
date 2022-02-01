@@ -1,0 +1,21 @@
+@use "sass:math";
+.header {
+  // .header__container
+  border-bottom: rem(1) solid $blackColor;
+  &__container {
+    padding-top: rem(16);
+    padding-bottom: rem(16);
+    text-align: center;
+  }
+
+  // .header__title
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 120%;
+    z-index: 1000;
+    letter-spacing: rem(3.5);
+  }
+}

@@ -1,0 +1,40 @@
+// Переменные
+$fontFamily: Arial;
+$mainFontSize: 16;
+$xlFontSize: 18;
+$xxlFontSize: 30;
+
+$maxWidth: 1920;
+$minWidth: 280;
+$maxWidthContainer: 77.5rem;
+
+// Breakpoints
+$xxl: 2048;
+$xl: 1940;
+$l: 1460;
+$m: 1024;
+$s: 780;
+$xs: 425;
+$xxs: 375;
+
+// [COLORS]
+
+// [white]
+$whiteColor: #ffffff;
+// [white]
+$blackColor: #000000;
+// [gray]
+$grayColor700: #3a3a3a;
+$grayColor500: #616161;
+$grayColor400: #898989;
+$grayColor300: #d8d8d8;
+$grayColor200: #e5e5e5;
+$grayColor100: #f4f5f7;
+// [blue]
+$blueColor500: #3653d3;
+
+// [TEXT]
+$textColor: $grayColor700;
+$lightTextColor: $grayColor300;
+
+$mainColor: $grayColor700;

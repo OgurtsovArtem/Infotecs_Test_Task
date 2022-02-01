@@ -1,0 +1,54 @@
+@use "sass:math";
+@import "./constants.scss";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+/* |Как использовать|
+Передаем в функцию параметры
+1 - css Свойство ($value_name)
+2* - макимальное значение свойства.($max_value)
+3* - минимальное значение свойства. ($min_value)
+4* - конечная миимальная ширина на которой свойствао примет свое минимальное значение ($min_width),
+    если величина меньше ($minWidth - задается в constants.scss как стандартное значение) можно передавать 1 или 0.
+
+* -- !!!без учета едениц измерения (px)
+
+|ПРИМЕР @include adaptive-value('margin-right', 50, 20, 540);|
+*/
+
+@mixin adaptive-value($value_name, $max_value, $min_value, $min_width) {
+  // Если больше максимальной высоты фиксируем максимальное значение как константу
+  #{$value_name}: math.div($max_value, $mainFontSize) + rem;
+  @media (max-width: $maxWidth+px) {
+    // Получаем возможность регулирования нужной минмальной ширины для адаптива
+    @if ($min_width >= $minWidth) {
+      #{$value_name}: calc(
+        #{$min_value + px} + #{($max_value - $min_value)} * ((100vw - #{$min_width + px}) / #{($maxWidth - $min_width)})
+      );
+      // Если меньше минимальной высоты фиксируем минимальное значение как константу
+      @media (max-width: $min_width+px) {
+        #{$value_name}: $min_value + px;
+      }
+    } @else {
+      #{$value_name}: calc(
+        #{$min_value + px} + #{($max_value - $min_value)} * ((100vw - #{$minWidth + px}) / #{($maxWidth - $minWidth)})
+      );
+      @media (max-width: $minWidth+px) {
+        #{$value_name}: $min_value + px;
+      }
+    }
+  }
+}
+
+@function rem($value) {
+  $remValue: math.div($value, $mainFontSize) + rem;
+  @return $remValue;
+}

@@ -1,0 +1,38 @@
+@use "sass:math";
+.footer {
+  // .footer__container
+  border-top: rem(1) solid $blackColor;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(16);
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+  }
+
+  // .footer__copyright
+
+  &__copyright {
+    font-weight: 500;
+  }
+
+  // .footer__company
+
+  &__company {
+    font-weight: bold;
+    color: $blueColor500;
+  }
+
+  // .footer__author
+
+  &__author {
+    // .footer__author_accent
+    font-weight: 500;
+    &_accent {
+      font-weight: bold;
+      color: $blueColor500;
+    }
+  }
+}

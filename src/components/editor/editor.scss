@@ -1,0 +1,92 @@
+.editor {
+  display: none;
+
+  &._open {
+    display: block;
+  }
+
+  // .editor__container
+  &__container {
+    background-color: $grayColor400;
+    max-width: rem(400);
+    padding: rem(20);
+    min-width: rem(300);
+  }
+
+  // .editor__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .editor__legend
+
+  &__legend {
+    font-weight: 500;
+    font-size: rem(18);
+    color: $whiteColor;
+  }
+
+  // .editor__label
+
+  &__label {
+    color: $whiteColor;
+    align-self: flex-start;
+    margin-bottom: rem(4);
+  }
+
+  // .editor__input
+
+  &__input {
+    width: 100%;
+    padding: rem(10);
+    margin-bottom: rem(20);
+  }
+  //.editor__textarea
+  &__textarea {
+    width: 100%;
+    resize: none;
+    margin-bottom: rem(20);
+  }
+  // .editor__button
+  &__button {
+    padding: rem(10);
+    border-radius: rem(10);
+    background-color: $whiteColor;
+    color: $blackColor;
+    max-width: rem(200);
+    width: 100%;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  //.editor__close
+  &__close {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    height: rem(20);
+    width: rem(20);
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateX(-50%);
+      height: rem(2);
+      width: 100%;
+      background-color: $whiteColor;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

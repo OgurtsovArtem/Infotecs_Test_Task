@@ -1,0 +1,60 @@
+{
+  "name": "closet",
+  "version": "1.0.0",
+  "description": "the \"closet\" page for the happykitchen website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "node ./node_modules/gulp/bin/gulp.js php"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adwin-agency/HappyKitchen-closet-page.git"
+  },
+  "author": "Artem Ogurtsov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adwin-agency/HappyKitchen-closet-page/issues"
+  },
+  "homepage": "https://github.com/adwin-agency/HappyKitchen-closet-page#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "browser-sync": "^2.27.3",
+    "core-js": "^3.19.1",
+    "del": "^6.0.0",
+    "eslint": "^7.32.0",
+    "gh-pages": "^3.2.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-css": "^1.1.0",
+    "gulp-webp-html": "^1.0.2",
+    "sass": "^1.35.1",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "gulp-rename": "^2.0.0",
+    "swiper": "^7.0.8"
+  }
+}
