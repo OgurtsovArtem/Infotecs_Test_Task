@@ -1,6 +1,6 @@
 ***[Тестовое задание для Infotecs](https://academy.infotecs.ru/)***
 ========================================
-### [GhPage](https://ogurtsovartem.github.io/Infotecs_Test_Task/)### 
+### [GhPage](https://ogurtsovartem.github.io/Infotecs_Test_Task/)
 ========================================
 ## Тестовое задание
 
